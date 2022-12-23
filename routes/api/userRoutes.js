@@ -10,16 +10,10 @@ const {
 } = require("../../controllers/userController");
 
 // /api/users
-router
-  .route("/")
-  .get(getUsers)
-  .get(getSingleUser)
-  .post(createUser)
-  .put(updateUser)
-  .delete(removeUser);
+router.route("/").get(getUsers).post(createUser);
 
-// // /api/users/:userId
-// router.route("/:userId").get(getSingleUser);
+// /api/users/:userId
+router.route("/:userId").get(getSingleUser).put(updateUser).delete(removeUser);
 
 // /api/users/:userId/friends/:friendId
 router.route("/:userId/friends/:friendId").post(addFriend).delete(removeFriend);

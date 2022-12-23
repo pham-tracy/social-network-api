@@ -22,10 +22,28 @@ module.exports = {
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.status(500).json(err));
   },
-  //   updateUser
-  //   updateUser(req, res) {
-  //     User.create(req.body)
-  //       .then((dbUserData) => res.json(dbUserData))
-  //       .catch((err) => res.status(500).json(err));
-  //   },
+  // updateUser
+  updateUser(req, res) {
+    User.put(req.body)
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.status(500).json(err));
+  },
+  // removeUser
+  removeUser(req, res) {
+    User.delete(req.body)
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.status(500).json(err));
+  },
+  // addFriend
+  addFriend(req, res) {
+    User.post(req.body)
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.status(500).json(err));
+  },
+  // removeFriend
+  removeFriend(req, res) {
+    User.delete(req.body)
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.status(500).json(err));
+  },
 };

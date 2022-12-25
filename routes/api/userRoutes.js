@@ -19,3 +19,13 @@ router.route("/:userId").get(getSingleUser).put(updateUser).delete(removeUser);
 router.route("/:userId/friends/:friendId").post(addFriend).delete(removeFriend);
 
 module.exports = router;
+
+// User controller methods
+
+// async function getUsers(req, res){
+
+// }
+
+// async function createUser(req, res){
+
+// }
